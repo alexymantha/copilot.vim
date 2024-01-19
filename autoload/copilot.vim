@@ -1,8 +1,8 @@
 scriptencoding utf-8
 
-let s:has_nvim_ghost_text = has('nvim-0.6') && exists('*nvim_buf_get_mark')
+let s:has_nvim_ghost_text = v:false
 let s:vim_minimum_version = '9.0.0185'
-let s:has_vim_ghost_text = has('patch-' . s:vim_minimum_version) && has('textprop')
+let s:has_vim_ghost_text = v:false
 let s:has_ghost_text = s:has_nvim_ghost_text || s:has_vim_ghost_text
 
 let s:hlgroup = 'CopilotSuggestion'
